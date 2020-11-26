@@ -86,6 +86,7 @@ namespace CC01.WinForm
             this.btncancel.TabIndex = 5;
             this.btncancel.Text = "Cancel";
             this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // Form1
             // 

@@ -16,5 +16,10 @@ namespace CC01.WinForm
         {
             InitializeComponent();
         }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

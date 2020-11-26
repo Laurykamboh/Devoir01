@@ -16,5 +16,36 @@ namespace CC01.WinForm
         {
             InitializeComponent();
         }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+
+            Etudiant etudiant = new Etudiant(
+                txtmatricule.Text,
+                txtnom.Text, txtprenom.Text,
+                int.Parse(txtcontact.Text),
+                txtecole.Text,
+                txtdatedenaissance.Text);
+            EtudiantBLO etudiantBLO = new EtudiantBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            etudiantBLO.CreateEtudiant(etudiant);
+            MessageBox.Show(
+                "save done!",
+                "confirmation",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
+            txtmatricule.Clear();
+            txtnom.Clear();
+            txtprenom.Clear();
+            txtcontact.Clear();
+            txtecole.Clear();
+            txtdatedenaissance.Clear();
+            txtmatricule.Focus();
+        }
     }
 }

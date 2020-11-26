@@ -54,6 +54,7 @@ namespace CC01.WinForm
             this.btnsave.TabIndex = 23;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // txtecole
             // 
@@ -153,6 +154,7 @@ namespace CC01.WinForm
             this.btncancel.TabIndex = 22;
             this.btncancel.Text = "Cancel";
             this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // label1
             // 

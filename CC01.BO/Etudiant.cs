@@ -17,20 +17,25 @@ namespace CC01.BO
         public string Prenom { get; set; }
         public int Contact { get; set; }
         public string Ecole { get; set; }
+        public string Ecolecourante { get; set; }
 
-        public Etudiant()
-        {
+        public string Ecolecourante { get; set; }
 
-        }
-
-        public Etudiant(string matricule, string nom, string prenom, int contact, string ecole)
+        public Etudiant(string matricule, string nom, string prenom, int contact, string datedenaissance, string ecolecourante)
         {
             Matricule = matricule;
             Nom = nom;
             Prenom = prenom;
-            Contact = contact;
-            Ecole = ecole;
+            this.Contact = contact;
+            Datedenaissance = datedenaissance;
+            Ecolecourante = ecolecourante;
         }
+
+        public Etudiant()
+        {
+        }
+
+
 
         public override bool Equals(object obj)
         {
@@ -42,5 +47,8 @@ namespace CC01.BO
         {
             return 797189699 + EqualityComparer<string>.Default.GetHashCode(Matricule);
         }
+
+
+
     }
 }
